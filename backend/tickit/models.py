@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.views.generic.edit import CreateView
+from .models import Event
 # Create your models here.
 
 
@@ -32,3 +33,13 @@ class Event(models.Model):
 
     def __str__(self):
         return self.event_name
+
+class AddEvent(CreateView):
+    model = Event
+    fields = ['venue', 'event_name', 'event_type', 'event_host', 'event_time', 'event_date', 'event_img', 'ticket_price_min', 'ticket_price_max']
+    template_name = 'add_event.html'
+    success_url = '/events/'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
