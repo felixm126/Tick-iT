@@ -10,10 +10,10 @@ function Header() {
 	return (
 		<div className="header">
 			<div className="header-primary">
-				<div className="sidenav-button-open" onClick={toggleSideNav}/>
+				<div className="text-title-26 sidenav-button-open" onClick={toggleSideNav}>☰</div>
 				{sideNav ? <SideNav toggleSideNav={toggleSideNav}/> : null}
-				<div className="header-app-title">tikit</div>
-				<div className="cart-button-open"/>
+				<div className="text-stylized-34">tikit</div>
+				<div className="text-title-26 cart-button-open">🛒</div>
 			</div>
 			<div className="header-search">
 				<SearchBar/>
