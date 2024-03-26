@@ -2,31 +2,31 @@ import GitHubButton from 'react-github-btn'
 
 function Footer() {
 	return (
-		<footer className="github">
-			<div>
-				<h4>Tikit</h4>
-				<GitHubButton href="https://github.com/felixm126/Tick-iT"></GitHubButton>
+		<footer className="footer">
+			<div className="footer-app-container">
+				<div className="footer-app-title">Tikit</div>
+				<GitHubButton href="https://github.com/felixm126/Tick-iT" className="footer-git-link"></GitHubButton>
 			</div>
-			<div>
-				<h4>Felix Man</h4>
-				<>
-					<GitHubButton href="https://github.com/felixm126"></GitHubButton>
+			<div className="footer-member-container">
+				<div className="footer-member-name">Felix Man</div>
+				<div className="footer-member-links">
+					<GitHubButton href="https://github.com/felixm126" className="footer-git-link"></GitHubButton>
 					<a href="https://www.linkedin.com/in/felix-man/">LinkedIn</a>
-				</>
+				</div>
 			</div>
-			<div>
-				<h4>Maddie Maz</h4>
-				<>
-					<GitHubButton href="https://github.com/maddiemaz"></GitHubButton>
+			<div className="footer-member-container">
+				<div className="footer-member-name">Maddie Maz</div>
+				<div className="footer-member-links">
+					<GitHubButton href="https://github.com/maddiemaz" className="footer-git-link"></GitHubButton>
 					<a href="https://www.linkedin.com/in/madeline-maslowsky/">LinkedIn</a>
-				</>
+				</div>
 			</div>
-			<div>
-				<h4>Wil Mckay</h4>
-				<>
-					<GitHubButton href="https://github.com/wilmckay"></GitHubButton>
+			<div className="footer-member-container">
+				<div className="footer-member-name">Wil Mckay</div>
+				<div className="footer-member-links">
+					<GitHubButton href="https://github.com/wilmckay" className="footer-git-link"></GitHubButton>
 					<a href="https://github.com/wilmckay">LinkedIn</a>
-				</>
+				</div>
 			</div>
 		</footer>
 	)
