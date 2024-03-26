@@ -4,15 +4,16 @@ TRUNCATE TABLE VENUES;
 ALTER SEQUENCE events_id_seq RESTART WITH 1;
 ALTER SEQUENCE venues_id_seq RESTART WITH 1;
 
-INSERT INTO venues(venue_name, street_address, city, state, zip_code, venue_type, venue_img) VALUES ('TD Pavillion | The Mann', '5201 Parkside Ave', 'Philadelphia', 'PA', '19131', 'Outdoor Music Venue & Event Space', 'https://manncenter.org/sites/default/files/styles/3_by_2_large/public/2019-10/fw8a0180.jpg');
+INSERT INTO venues(venue_name, street_address, city, state, zip_code, venue_type, venue_img) VALUES ('The Mann Center', '5201 Parkside Ave', 'Philadelphia', 'PA', '19131', 'Outdoor Music Venue & Event Space', 'https://manncenter.org/sites/default/files/styles/3_by_2_large/public/2019-10/fw8a0180.jpg');
 INSERT INTO venues(venue_name, street_address, city, state, zip_code, venue_type, venue_img) VALUES ('The Fillmore', '29 E Allen St', 'Philadelphia', 'PA', '19123', 'Multi-Venue Performace & Event Space', 'https://assets.livenationcdn.com/uploads/fillmore-header.png');
 INSERT INTO venues(venue_name, street_address, city, state, zip_code, venue_type, venue_img) VALUES ('Theatre of the Living Arts', '334 South St', 'Philadelphia', 'PA', '19147', 'Concert Venue', 'https://assets.livenationcdn.com/uploads/tla_1024x576.jpg');
 INSERT INTO venues(venue_name, street_address, city, state, zip_code, venue_type, venue_img) VALUES ('The Moshulu', '40 S Christopher Columbus Blvd', 'Philadelphia', 'PA', '1906', 'Restaurant, Museum, & Event Vessel', 'https://fastly.4sqi.net/img/general/600x600/33940132_NS_zTQwoe3-bV0HeF4Z9Wcv-JOJOkWOHortGgno9Irc.jpg');
 INSERT INTO venues(venue_name, street_address, city, state, zip_code, venue_type, venue_img) VALUES ('Lincoln Financial Field', '1 Lincoln Financial Field Way', 'Philadelphia', 'PA', '19148', 'Football Stadium', 'https://pbs.twimg.com/profile_images/1762190674877673472/OGAjE1GK_400x400.jpg');
 
--- TD Pavllion
+-- The Mann Center
 INSERT INTO events(venue_id, event_name, event_type, event_host, event_time, event_date, event_img, ticket_price_min, ticket_price_max) VALUES (1, 'Balletx Festival', 'Contemporary Ballet', 'BalletX', '7:30 pm', 'Saturday', 'April 27', 'https://www.westphillylocal.com/wp-content/uploads/2024/03/BalletX-Mann-Festival.jpg', 25, 133);
 INSERT INTO events(venue_id, event_name, event_type, event_host, event_time, event_date, event_img, ticket_price_min, ticket_price_max) VALUES (1, 'The Avett Brothers', 'Concert', 'The Avett Brothers', '7:00 pm', 'Thursday', 'May 16', 'https://manncenter.org/sites/default/files/styles/event_slideshow/public/2024-01/Avetts.png?h=57024e64', 75, 850);
+INSERT INTO events(venue_id, event_name, event_type, event_host, event_time, event_date, event_img, ticket_price_min, ticket_price_max) VALUES (1, 'Tour of the Setting Sum', 'Concert', 'Sum 41', '6:30 pm', 'Saturday', 'May 18', 'https://assets.exclaim.ca/dr2uqw6xy/image/upload/c_limit,w_890/f_auto/q_auto/sum-41-final-tour-2024-2025?_a=BAVAfVIB0', 62, 205);
 INSERT INTO events(venue_id, event_name, event_type, event_host, event_time, event_date, event_img, ticket_price_min, ticket_price_max) VALUES (1, 'Batman in Concert', '', 'Philadelphia Orchestra', '8:00 pm', 'Tuesday', 'June 18', 'https://manncenter.org/sites/default/files/styles/event_slideshow/public/2024-03/Batman-Event-Photo.jpg?h=8a7fc05e', 49, 189);
 
 -- The Fillmore
