@@ -16,7 +16,7 @@ function SearchBar() {
 	}
 	return (
 		<div className="searchbar">
-			<form on submit={handleSubmit}>
+			<form className="searchbar-input" onSubmit={handleSubmit}>
 				<input
 					type="text"
 					id="text"
@@ -24,7 +24,7 @@ function SearchBar() {
 					placeholder="Search events"
 					onChange={handleChange}
 				/>
-				<button type="submit">Search</button>
+				<button className="searchbar-button" type="submit">Search</button>
 			</form>
 		</div>
 	)
