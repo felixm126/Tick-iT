@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function UpcomingEvents() {
 	const [upcomingEvents, setUpcomingEvents] = useState([])
@@ -33,6 +33,13 @@ function UpcomingEvents() {
 	}
 	return (
 		<div className="event-detail-page">
+			<div className="list-header">
+				<div className="text-title-24">Upcoming Events</div>
+				<div className="list-location-set">
+					<div className="list-location-icon">📍</div>
+					<div className="text-body-14-reg text-underline">Philadelphia</div>
+				</div>
+			</div>
 			{upcomingEvents.map((event) => (
 				<div
 					key={event.id}
@@ -54,7 +61,7 @@ function UpcomingEvents() {
 					</div>
 					<div className="event-info-location">
 						<div className="event-location-set">
-							<div className="event-location-icon">:round_pushpin:</div>
+							<div className="event-location-icon">📍</div>
 							<div className="text-body-14-light">
 								{event.venue.city}, {event.venue.state}
 							</div>
@@ -66,16 +73,16 @@ function UpcomingEvents() {
 					</div>
 					<div className="event-info-date-time">
 						<div className="event-date-set">
-							<div className="event-date-icon">:date:</div>
+							<div className="event-date-icon">📅</div>
 							<div className="text-body-20">{event.event_date}</div>
 						</div>
 						<div className="event-time-set">
-							<div className="event-time-icon">:clock3:</div>
+							<div className="event-time-icon">🕒</div>
 							<div className="text-body-20">{event.event_time}</div>
 						</div>
 					</div>
 					<div className="event-info-pricing">
-						<div className="event-ticket-icon">:ticket:</div>
+						<div className="event-ticket-icon">🎫</div>
 						<div className="event-pricing-min">
 							<div className="text-body-20">${event.ticket_price_min}</div>
 							<div className="text-body-10">min</div>
