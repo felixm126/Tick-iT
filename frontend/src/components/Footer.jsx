@@ -1,4 +1,5 @@
 import GitHubButton from 'react-github-btn'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 function Footer() {
 	return (
@@ -18,7 +19,8 @@ function Footer() {
 				<div className="footer-member-name">Maddie Maz</div>
 				<div className="footer-member-links">
 					<GitHubButton href="https://github.com/maddiemaz" className="footer-git-link"></GitHubButton>
-					<a href="https://www.linkedin.com/in/madeline-maslowsky/">LinkedIn</a>
+					<img src="fab fa-linkedin" alt="LinkedIn" href="https://www.linkedin.com/in/madeline-maslowsky/"></img>
+					<FontAwesomeIcon icon="fa-brands fa-linkedin" />
 				</div>
 			</div>
 			<div className="footer-member-container">
