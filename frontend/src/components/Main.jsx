@@ -3,6 +3,8 @@ import EventList from './EventList'
 import EventDetails from './EventDetails'
 import VenueList from './VenueList'
 import VenueDetails from './VenueDetails'
+import AddEventPage from '../pages/AddEventPage'
+import AddEventForm from './AddEventForm'
 // import HomePage from '../pages/HomePage'
 
 function Main() {
@@ -17,6 +19,7 @@ function Main() {
 				<Route path="/venues/:id" element={<VenueDetails />} />
 				<Route path="/event-details" element={<EventDetails />} />
 				<Route path="/venue-details" element={<VenueDetails />} />
+				<Route path='/addevent' element={<AddEventForm/>}/>
 			</Routes>
 		</main>
 	)
