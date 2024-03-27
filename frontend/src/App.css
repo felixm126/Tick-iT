@@ -14,6 +14,7 @@ body {
 	display: block;
 	font-family: "Bai Jamjuree", sans-serif;
 	color: white;
+	/* position: relative; */
 }
 
 /* Fonts - CSS */
@@ -175,7 +176,86 @@ body {
 
 	margin: 20px 30px 20px 20px;
 }
-.searchbar {}
+.header-search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.searchbar{}
+.searchbar-input {
+	font-family: "Bai Jamjuree";
+	font-size: 16px;
+	width: 200px;
+	color: #000000;
+
+	/* background-color: rgba(255, 255, 255, .3); */
+	border: none;
+	border-radius: 50px;
+}
+.searchbar-button {
+	background-image: linear-gradient(135deg, #bb2a4c, #E1486C);
+	border-radius: 5px;
+	border: none;
+
+	margin-left: 5px;
+	/* padding: 0px 3px 0px 3px; */
+
+	color: white;
+	/* font-family: "Audiowide"; */
+	/* font-family: "Bruno Ace"; */
+	font-family: "Bai Jamjuree";
+	font-size: 16px;
+}
+
+/* Footer */
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: end;
+
+	background-color: rgba(0,0,0, .15);
+	padding: 10px 0px 10px 0px;
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.footer-app-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: 50px;
+	margin-left: 10px;
+}
+.footer-spacer {
+	height: 40px;
+	width: 1px;
+	background-color: white;
+	opacity: .75;
+}
+.footer-member-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.footer-git-link, .footer-linked-link {
+	margin: 5px 3px 0px 3px;
+	font-size: 20px;
+	opacity: .8;
+}
+.footer-linked-link:hover{
+	opacity: 1;
+}
+.footer-git-link:hover{
+	opacity: 1;
+}
+.footer-git-link-main {
+	font-size: 24px;
+}
 
 /* SideNav */
 .sidenav {
@@ -245,24 +325,26 @@ body {
 }
 
 /* List Page */
-.event-list-page {
+.event-list-page, .venue-list-page {
 	display: flex;
 	flex-direction: column;
 
 	margin: 20px 30px 20px 20px;
+
+	position: relative;
 }
 .list-header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+	align-items: baseline;
 
 	margin-bottom: 5px;
 }
 .list-location-set {
 	display: flex;
 	flex-direction: row;
-	align-items: baseline;
+	align-items: center;
 }
 .list-location-icon {
 	margin-right: 5px;
@@ -334,9 +416,11 @@ body {
 }
 
 /* Detail Page */
-.event-detail-page {
+.event-detail-page, .venue-detail-page {
 	display: flex;
 	flex-direction: column;
+
+	position: relative;
 
 	margin: 20px 20px 20px 25px;
 }
@@ -346,7 +430,7 @@ body {
 	align-items: center;
 	
 	width: 350px;
-	height: 615px;
+	height: 650px;
 	background-color: rgba(0,0,0, .4);
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px 0px rgb(0 0 0 /20%);
@@ -372,14 +456,14 @@ body {
 
 	/* max-height: 300px; */
 }
-.event-info-primary {
+.event-info-primary, .venue-info-primary {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	
 	width: 300px;
 	height: 50px;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 .margin-bottom-neg-10 {
 	margin-bottom: -10px;
@@ -392,6 +476,10 @@ body {
 }
 .event-location-set {
 	display: flex;
+	margin-bottom: 3px;
+}
+.event-location-icon, .venue-location-icon {
+	margin-right: 7px;
 }
 .event-info-date-time {
 	display: flex;
@@ -405,12 +493,16 @@ body {
 .event-date-set {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 
-	margin: 10px 30px 10px 30px;
+	margin: 20px 30px 10px 30px;
 }
 .event-time-set {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+
+	margin: 20px 30px 10px 30px;
 }
 .event-info-pricing {
 	display: flex;
@@ -426,6 +518,7 @@ body {
 }
 .event-ticket-icon {
 	margin-right: 10px;
+	transform: rotate(-45deg);
 }
 .event-date-icon, .event-time-icon {
 	margin-right: 10px;
@@ -437,12 +530,34 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 40px;
+	height: 50px;
 	width: 350px;
 
 	/* align-self: flex-end; */
 
 	background-color: #E1486C;
 	border-radius: 0px 0px 5px 5px;
+	margin-top: 2px;
 }
 
+.venue-detail-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	width: 350px;
+	/* height: 440px; */
+	padding-bottom: 10px;
+	background-color: rgba(0,0,0, .4);
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px 0px rgb(0 0 0 /20%);
+
+	margin-bottom: 17px;
+}
+.venue-info-location {
+	width: 300px;
+	display: flex;
+	align-items: center;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
