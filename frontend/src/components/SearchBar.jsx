@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -11,8 +10,7 @@ function SearchBar() {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		// TODO: Add in navigate url endpoint
-		// navigate()
+		navigate(`/events/${searchBarText}`)
 	}
 	return (
 		<div className="searchbar">
@@ -24,7 +22,9 @@ function SearchBar() {
 					placeholder="Search events"
 					onChange={handleChange}
 				/>
-				<button className="searchbar-button" type="submit">Search</button>
+				<button className="searchbar-button" type="submit">
+					Search
+				</button>
 			</form>
 		</div>
 	)
