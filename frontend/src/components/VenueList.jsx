@@ -8,7 +8,7 @@ function EventList() {
 	// const [events, setEvents] = useState([])
 
 	// useEffect(() => {
-	// 	const getVenues = async() => {
+	// 	const getEvents = async() => {
 	// 		const response = await axios.get('http://localhost:8000/events')
 	// 		setEvents(response.data)
 	// 	}
