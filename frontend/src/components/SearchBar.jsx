@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 function SearchBar() {
 	const [searchBarText, setSearchBarText] = useState('')
 	const navigate = useNavigate()
+	const { id } = useParams()
 
 	const handleChange = (e) => {
 		setSearchBarText(e.target.value)
@@ -11,7 +12,6 @@ function SearchBar() {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		if (searchBarText.trim()) {
-			// TODO: probably need to update url
 			navigate(`/events/${id}`)
 		}
 	}
@@ -23,7 +23,7 @@ function SearchBar() {
 					type="text"
 					id="searchEvent"
 					value={searchBarText}
-					placeholder="  search events"
+					placeholder="search events"
 					onChange={handleChange}
 				/>
 				<button className="searchbar-button" type="submit">
