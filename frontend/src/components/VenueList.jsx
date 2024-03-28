@@ -17,7 +17,7 @@ function VenueList() {
 		getVenues()
 	}, [])
 
-	// Sort by nearest, in theory
+	// Sort by nearest, in theory, or most popular
 
 	if (!venues) {
 		return <div className="loading">Loading...</div>

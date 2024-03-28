@@ -515,14 +515,16 @@ body {
 	flex-direction: row;
 	align-items: center;
 
-	margin: 20px 30px 10px 30px;
+	/* margin: 20px 30px 10px 30px; */
+	margin: 20px 10px 10px 10px;
 }
 .event-time-set {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 
-	margin: 20px 30px 10px 30px;
+	/* margin: 20px 30px 10px 30px; */
+	margin: 20px 10px 10px 10px;
 }
 .event-info-pricing {
 	display: flex;
