@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 function UpcomingEvents() {
 	const [upcomingEvents, setUpcomingEvents] = useState([])
@@ -42,7 +43,7 @@ function UpcomingEvents() {
 			<div className="list-header">
 				<div className="text-title-24">Upcoming Events</div>
 				<div className="list-location-set">
-					<div className="list-location-icon">📍</div>
+					<FontAwesomeIcon icon={faLocationDot} className="list-location-icon"/>
 					<div className="text-body-14-reg text-underline">Philadelphia</div>
 				</div>
 			</div>
