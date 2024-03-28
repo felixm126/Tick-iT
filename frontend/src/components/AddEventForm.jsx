@@ -41,7 +41,7 @@ const AddEventForm = ({ onClose }) => {
                         <input className="form-input text-body-14-light" type="text" name="venue" value={formData.venue} onChange={handleChange} />
                     </div>
                     <div className="form-line-label-input">
-                        <label className="form-label text-body-14-med">Event Name:</label>
+                        <label className="form-label text-body-14-med">Name:</label>
                         <input className="form-input text-body-14-light" type="text" name="event_name" value={formData.event_name} onChange={handleChange} />
                     </div>
                     <div className="form-line-label-input">
