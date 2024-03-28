@@ -286,9 +286,18 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+	align-items: top;
 
 	margin: 20px 20px 20px 30px;
+}
+.sidenav-header-logo-set {
+	display: flex;
+	flex-direction: column;
+}
+.sidenav-ticket-icon {
+	transform: rotate(-45deg);
+	font-size: 36px;
+	margin: 20px 0px 10px 0px;
 }
 .sidenav-header-title {
 	font-family: "Audiowide";
@@ -319,6 +328,12 @@ body {
 	margin-bottom: 20px;
 	color: white;
 	text-decoration: none;
+
+	display: flex;
+	align-items: center;
+}
+.sidenav-link-icon {
+	margin-right: 10px;
 }
 .sidenav-link-1 {
 	font-size: 18px;
@@ -606,6 +621,7 @@ body {
 }
 .form-title {
 	text-align: center;
+	margin-bottom: 10px;
 }
 .form-line-label-input {
 	width: 310px;
@@ -640,14 +656,15 @@ body {
 	margin-bottom: 10px;
 }
 .form-line-date {
-	justify-content: end;
+	justify-content: flex-end;
+	width: 200px;
 }
 .form-label-med {
 	text-align: right;
 	margin-right: 10px;
 }
 .form-input-med {
-	width: 70px;
+	width: 100px;
 }
 .form-label-max {
 	margin-right: 10px;
@@ -662,7 +679,7 @@ body {
 	border: none;
 
 	width: 350px;
-	height: 40px;
+	height: 50px;
 
 	color: white;
 	font-family: "Audiowide";

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-// import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+// import { faCalendar, faClock } from '@fortawesome/free-regular-svg-icons'
+// import { faLocationDot, faTicket } from '@fortawesome/free-solid-svg-icons'
 
 function UpcomingEvents() {
 	const [upcomingEvents, setUpcomingEvents] = useState([])
@@ -91,15 +92,18 @@ function UpcomingEvents() {
 					<div className="event-info-date-time">
 						<div className="event-date-set">
 							<div className="event-date-icon">📅</div>
+							{/* <FontAwesomeIcon icon={faCalendar} className="event-date-icon" /> */}
 							<div className="text-body-20">{event.event_date}</div>
 						</div>
 						<div className="event-time-set">
 							<div className="event-time-icon">🕒</div>
+							{/* <FontAwesomeIcon icon={faClock} className="event-time-icon" /> */}
 							<div className="text-body-20">{event.event_time}</div>
 						</div>
 					</div>
 					<div className="event-info-pricing">
 						<div className="event-ticket-icon">🎫</div>
+						{/* <FontAwesomeIcon icon={faTicket} className="event-ticket-icon" /> */}
 						<div className="event-pricing-min">
 							<div className="text-body-20">${event.ticket_price_min}</div>
 							<div className="text-body-10">min</div>
@@ -111,7 +115,7 @@ function UpcomingEvents() {
 						</div>
 					</div>
 					<div className="event-card-button-container">
-						<button className="text-stylized-16">Browse Tickets</button>
+						<div className="text-stylized-16">browse tikits</div>
 					</div>
 				</div>
 			))}
