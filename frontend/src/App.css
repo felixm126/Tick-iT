@@ -199,9 +199,11 @@ body {
 }
 .searchbar-button {
 	background-image: linear-gradient(135deg, #bb2a4c, #E1486C);
-	border-radius: 5px;
+	border-radius: 15px;
 	border: none;
 
+	width: 70px;
+	height: 25px;
 	margin-left: 5px;
 	/* padding: 0px 3px 0px 3px; */
 
@@ -433,7 +435,7 @@ body {
 }
 
 /* Detail Page */
-.event-detail-page, .venue-detail-page {
+.event-detail-page, .venue-detail-page, .add-event-page {
 	display: flex;
 	flex-direction: column;
 
@@ -515,14 +517,16 @@ body {
 	flex-direction: row;
 	align-items: center;
 
-	margin: 20px 30px 10px 30px;
+	/* margin: 20px 30px 10px 30px; */
+	margin: 20px 10px 10px 10px;
 }
 .event-time-set {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 
-	margin: 20px 30px 10px 30px;
+	/* margin: 20px 30px 10px 30px; */
+	margin: 20px 10px 10px 10px;
 }
 .event-info-pricing {
 	display: flex;
@@ -558,6 +562,9 @@ body {
 	background-color: #E1486C;
 	border-radius: 0px 0px 5px 5px;
 	margin-top: 2px;
+
+	color: white;
+	text-decoration: none;
 }
 
 .venue-detail-card {
@@ -567,12 +574,12 @@ body {
 	
 	width: 350px;
 	/* height: 440px; */
-	padding-bottom: 10px;
+	/* padding-bottom: 10px; */
 	background-color: rgba(0,0,0, .4);
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px 0px rgb(0 0 0 /20%);
 
-	margin-bottom: 17px;
+	/* margin-bottom: 17px; */
 }
 .venue-info-location {
 	width: 300px;
@@ -580,4 +587,87 @@ body {
 	align-items: center;
 	margin-top: -10px;
 	margin-bottom: 10px;
+}
+
+/* Add Event */
+.add-event-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 350px;
+
+	background-color: rgba(0,0,0, .4);
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px 0px rgb(0 0 0 /20%);
+}
+.form-content {
+	margin: 10px;
+}
+.form-title {
+	text-align: center;
+}
+.form-line-label-input {
+	width: 310px;
+	display: flex;
+	justify-content: space-between;
+
+	margin-bottom: 10px;
+}
+.form-label {
+	/* margin-right: 10px; */
+	min-width: 40px;
+}
+.form-input {
+	width: 210px;
+	/* max-width: 210px;
+	min-width: 100px; */
+}
+.add-event-form-lines-pricing, .add-event-form-lines-date {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	margin-top: 20px;
+}
+.form-line-pricing, .form-line-date {
+	display: flex;
+	display: column;
+	align-items: center;
+	justify-content: center;
+
+	margin-bottom: 10px;
+}
+.form-line-date {
+	justify-content: end;
+	align-items: end;
+}
+.form-label-med {
+	text-align: right;
+	margin-right: 10px;
+}
+.form-input-med {
+	width: 70px;
+}
+.form-label-max {
+	margin-right: 10px;
+}
+.form-input-min {
+	width: 50px;
+}
+.add-event-submit-button {
+	margin-top: 10px;
+	background-image: linear-gradient(135deg, #bb2a4c, #E1486C);
+	border-radius: 0px 0px 5px 5px;
+	border: none;
+
+	width: 350px;
+	height: 40px;
+
+	color: white;
+	font-family: "Audiowide";
+	/* font-family: "Bruno Ace"; */
+	/* font-family: "Bai Jamjuree"; */
+	font-size: 16px;
 }
