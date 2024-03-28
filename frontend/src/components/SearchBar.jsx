@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 function SearchBar() {
 	const [searchBarText, setSearchBarText] = useState('')
@@ -10,14 +10,17 @@ function SearchBar() {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		navigate(`/events/${searchBarText}`)
+		if (searchBarText.trim()) {
+			// TODO: probably need to update url
+			navigate(`/event-details/${encodeURIComponent(searchBarText)}`)
+		}
 	}
 	return (
 		<div className="searchbar">
 			<form className="searchbar-input" onSubmit={handleSubmit}>
 				<input
 					type="text"
-					id="text"
+					id="searchEvent"
 					value={searchBarText}
 					placeholder="Search events"
 					onChange={handleChange}
