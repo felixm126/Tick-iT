@@ -18,13 +18,13 @@ class Venue(models.Model):
 
 
 class Event(models.Model):
-    venue = models.ForeignKey(
+    tickit_venue = models.ForeignKey(
         Venue, on_delete=models.CASCADE, related_name='events')
     event_name = models.CharField(max_length=100, default='')
     event_type = models.CharField(max_length=100, default='')
     event_host = models.TextField(max_length=100, default='')
     event_time = models.TextField(max_length=10, default='')
-    event_date = models.DateField(max_length=100, default='')
+    event_date = models.CharField(max_length=100, default='')
     event_img = models.TextField(default='')
 
     ticket_price_min = models.IntegerField()

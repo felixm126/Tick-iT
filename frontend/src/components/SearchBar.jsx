@@ -12,7 +12,7 @@ function SearchBar() {
 		e.preventDefault()
 		if (searchBarText.trim()) {
 			// TODO: probably need to update url
-			navigate(`/event-details/${encodeURIComponent(searchBarText)}`)
+			navigate(`/events/${id}`)
 		}
 	}
 	return (
@@ -26,8 +26,9 @@ function SearchBar() {
 					placeholder="  search events"
 					onChange={handleChange}
 				/>
-				<button className="searchbar-button" type="submit">search</button>
-
+				<button className="searchbar-button" type="submit">
+					search
+				</button>
 			</form>
 		</div>
 	)

@@ -9,7 +9,7 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
     )
     venue_id = serializers.PrimaryKeyRelatedField(
         queryset=Venue.objects.all(),
-        source='venue'
+        source='tickit_venue'
     )
 
     class Meta:

@@ -8,15 +8,14 @@ function UpcomingEvents() {
 	const [noEvents, setNoEvents] = useState(false)
 
 	// Default to philly unless we add city choice component
-	const [city, setCity] = useState('Philadelphia')
+	// const [city, setCity] = useState('Philadelphia')
 	const navigate = useNavigate()
 	const { id } = useParams()
 
 	useEffect(() => {
 		const getUpcomingEvents = async () => {
-			const url = `https://localhost:8000/events/${id}?city=${encodeURIComponent(
-				city
-			)}`
+			const url = `https://localhost:8000/events/${id}`
+			// const url = `https://localhost:8000/events/${id}?city=${city}`
 			const response = await axios.get(url)
 
 			// Adapted examples shown in -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
