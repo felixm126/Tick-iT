@@ -8,7 +8,7 @@ import VenueDetails from './VenueDetails'
 // import AddEventPage from '../pages/AddEventPage'
 import AddEventForm from './AddEventForm'
 import HomePage from '../pages/HomePage'
-import UpcomingEvents from './UpcomingEvents'
+// import UpcomingEvents from './UpcomingEvents'
 
 function Main() {
 	return (
@@ -17,12 +17,13 @@ function Main() {
 				<Route path="/" element={<HomePage />} />
 				<Route path="/events" element={<EventList />} />
 				<Route path="/events/:id" element={<EventDetails />} />
+				<Route path="/events/:event_name" element={<EventDetails />} />
 				<Route path="/venues" element={<VenueList />} />
 				<Route path="/venues/:id" element={<VenueDetails />} />
 				<Route path="/event-details" element={<EventDetailsTest />} />
 				<Route path="/venue-details" element={<VenueDetailsTest />} />
 				<Route path="/addevent" element={<AddEventForm />} />
-				<Route path="/upcomingevents" elemennt={<UpcomingEvents />} />
+				{/* <Route path="/upcoming-events/:id" element={<UpcomingEvents />} /> */}
 			</Routes>
 		</main>
 	)

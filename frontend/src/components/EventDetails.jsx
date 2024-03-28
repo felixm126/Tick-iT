@@ -19,7 +19,7 @@ function EventDetails() {
 			setEvent(response.data)
 		}
 		getEvents()
-	}, [event])
+	}, [id])
 
 	if (!event) {
 		return <div className="loading">Loading...</div>
