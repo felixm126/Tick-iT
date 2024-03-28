@@ -6,7 +6,7 @@ import VenueDetails from './VenueDetails'
 // import AddEventPage from '../pages/AddEventPage'
 import AddEventForm from './AddEventForm'
 import HomePage from '../pages/HomePage'
-import UpcomingEvents from './UpcomingEvents'
+// import UpcomingEvents from './UpcomingEvents'
 
 function Main() {
 	return (
@@ -20,7 +20,7 @@ function Main() {
 				<Route path="/event-details" element={<EventDetails />} />
 				<Route path="/venue-details" element={<VenueDetails />} />
 				<Route path="/addevent" element={<AddEventForm />} />
-				<Route path="/upcomingevents" elemennt={<UpcomingEvents />} />
+				{/* <Route path="/upcoming-events/:id" element={<UpcomingEvents />} /> */}
 			</Routes>
 		</main>
 	)

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 function UpcomingEvents() {
@@ -8,14 +7,12 @@ function UpcomingEvents() {
 	const [noEvents, setNoEvents] = useState(false)
 
 	// Default to philly unless we add city choice component
-	// const [city, setCity] = useState('Philadelphia')
+	const [city, setCity] = useState('Philadelphia')
 	const navigate = useNavigate()
-	const { id } = useParams()
 
 	useEffect(() => {
 		const getUpcomingEvents = async () => {
-			const url = `https://localhost:8000/events/${id}`
-			// const url = `https://localhost:8000/events/${id}?city=${city}`
+			const url = `http://localhost:8000/events/`
 			const response = await axios.get(url)
 
 			// Adapted examples shown in -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
@@ -27,12 +24,12 @@ function UpcomingEvents() {
 
 			setUpcomingEvents(sortedEvents)
 
-			if (response.data.length === 0) {
+			if (sortedEvents.length === 0) {
 				setNoEvents(true)
 			}
 		}
 		getUpcomingEvents()
-	}, [city, id])
+	}, [])
 
 	if (noEvents) {
 		return <p>No Events near you...</p>
@@ -52,6 +49,16 @@ function UpcomingEvents() {
 					className="detail-card"
 					onClick={() => navigate(`/events/${event.id}`)}
 				>
+					{/* <div key={event.event_url}>
+						<h3>{event.venue_name}</h3>
+						<p>{event.venue_type}</p>
+						<img
+							src={event.venue_img}
+							alt={`Venue: ${event.venue_name}`}
+							style={{ width: '100px', height: '100px' }}
+						/>
+						
+					</div> */}
 					<div className="detail-card-img-container">
 						<img
 							className="detail-card-img"
@@ -65,7 +72,7 @@ function UpcomingEvents() {
 						</div>
 						<div className="text-body-16-med">{event.event_host}</div>
 					</div>
-					<div className="event-info-location">
+					{/* <div className="event-info-location">
 						<div className="event-location-set">
 							<div className="event-location-icon">📍</div>
 							<div className="text-body-14-light">
@@ -76,7 +83,7 @@ function UpcomingEvents() {
 							{event.venue.street_address}, {event.venue.city}{' '}
 							{event.venue.state} {event.venue.zip_code}
 						</div>
-					</div>
+					</div> */}
 					<div className="event-info-date-time">
 						<div className="event-date-set">
 							<div className="event-date-icon">📅</div>
