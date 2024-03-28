@@ -56,11 +56,11 @@ function EventDetails() {
 					<div className="event-info-date-time">
 						<div className="event-date-set">
 							<FontAwesomeIcon icon={faCalendar} className="event-date-icon" />
-							<div className="text-body-20">{event.event_date}</div>
+							<div className="text-body-16">{event.event_date}</div>
 						</div>
 						<div className="event-time-set">
 							<FontAwesomeIcon icon={faClock} className="event-time-icon" />
-							<div className="text-body-20">{event.event_time}</div>
+							<div className="text-body-16">{event.event_time}</div>
 						</div>
 					</div>
 					<div className="event-info-pricing">
