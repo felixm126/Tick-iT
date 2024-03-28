@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import EventList from './EventList'
 import EventDetails from './EventDetails'
+import EventDetailsTest from './EventDetails-Test'
+import VenueDetailsTest from './VenueDetails-Test'
 import VenueList from './VenueList'
 import VenueDetails from './VenueDetails'
 // import AddEventPage from '../pages/AddEventPage'
@@ -17,8 +19,8 @@ function Main() {
 				<Route path="/events/:id" element={<EventDetails />} />
 				<Route path="/venues" element={<VenueList />} />
 				<Route path="/venues/:id" element={<VenueDetails />} />
-				<Route path="/event-details" element={<EventDetails />} />
-				<Route path="/venue-details" element={<VenueDetails />} />
+				<Route path="/event-details" element={<EventDetailsTest />} />
+				<Route path="/venue-details" element={<VenueDetailsTest />} />
 				<Route path="/addevent" element={<AddEventForm />} />
 				<Route path="/upcomingevents" elemennt={<UpcomingEvents />} />
 			</Routes>
