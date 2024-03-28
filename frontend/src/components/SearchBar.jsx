@@ -17,17 +17,17 @@ function SearchBar() {
 	}
 	return (
 		<div className="searchbar">
-			<form className="searchbar-input" onSubmit={handleSubmit}>
+			<form className="searchbar-form" onSubmit={handleSubmit}>
 				<input
+					className="searchbar-input"
 					type="text"
 					id="searchEvent"
 					value={searchBarText}
-					placeholder="Search events"
+					placeholder="  search events"
 					onChange={handleChange}
 				/>
-				<button className="searchbar-button" type="submit">
-					Search
-				</button>
+				<button className="searchbar-button" type="submit">search</button>
+
 			</form>
 		</div>
 	)

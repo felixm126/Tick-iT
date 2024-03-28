@@ -1,6 +1,8 @@
 import {useNavigate} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 
 function EventList() {
 	// let navigate = useNavigate()
@@ -22,11 +24,11 @@ function EventList() {
 	// 	return <div className="loading">Loading...</div>
 	// } else {
 		return (
-			<div className="event-list-page">
+			<div className="venue-list-page">
 				<div className="list-header">
-					<div className="text-title-24">Upcoming Events</div>
+					<div className="text-title-24">Venues</div>
 					<div className="list-location-set">
-						<div className="list-location-icon">📍</div>
+						<FontAwesomeIcon icon={faLocationDot} className="list-location-icon"/>
 						<div className="text-body-14-reg text-underline">Philadelphia</div>
 					</div>
 
@@ -39,17 +41,21 @@ function EventList() {
 								{/* <img src={event.event_img} alt={event.event_name} className="list-card-img"/> */}
 							</div>
 							<div className="list-card-info">
-								<div className="text-title-20">Event Name</div>
-								<div className="text-body-14-med spacing-5">Event Host</div>
-								<div className="text-body-14-light spacing-5">@ Event Venue</div>
-								<div className="text-body-16 spacing-7">Event Date</div>
-								{/* <div className="text-title-20">{event.event_name}</div>
-								<div className="text-body-14-med spacing-5">@ {event.event_host}</div>
-								<div className="text-body-14-light spacing-5">{event.venue}</div>
-								<div className="text-body-16 spacing-7">{event.event_date}</div> */}
+								<div className="venue-list-info-primary">
+									<div className="text-title-20">Venue Name</div>
+									<div className="text-body-14-med spacing-10">Venue Space Type</div>
+									{/* <div className="text-title-20">{venue.venue_name}</div>
+									<div className="text-body-14-med spacing-10">{venue.venue_type}</div> */}
+								</div>
+								<div className="venue-list-info-location spacing-5">
+									<div className="text-body-14-light">Venue Street Address</div>
+									<div className="text-body-14-light">City, State, Zip</div>
+									{/* <div className="text-body-14-light">{venue.street_address}</div>
+									<div className="text-body-14-light">{venue.city}, {venue.state} {venue.zip_code}</div> */}
+								</div>
 							</div>
 							<div className="list-card-button-container">
-								<div className="list-card-button-text text-stylized-14">tikits</div>
+								<div className="list-card-button-text text-stylized-14">view</div>
 							</div>
 						</div>
 					{/* ))} */}

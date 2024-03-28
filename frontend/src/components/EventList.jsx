@@ -1,6 +1,8 @@
 import {useNavigate} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 
 function EventList() {
 	let navigate = useNavigate()
@@ -26,7 +28,7 @@ function EventList() {
 				<div className="list-header">
 					<div className="text-title-24">Upcoming Events</div>
 					<div className="list-location-set">
-						<div className="list-location-icon">📍</div>
+						<FontAwesomeIcon icon={faLocationDot} className="list-location-icon"/>
 						<div className="text-body-14-reg text-underline">Philadelphia</div>
 					</div>
 
