@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS events;
-DROP TABLE IF EXISTS venues;
+DROP TABLE IF EXISTS events CASCADE;
+DROP TABLE IF EXISTS venues CASCADE;
 
 CREATE TABLE venues (
   id SERIAL PRIMARY KEY,
@@ -9,7 +9,7 @@ CREATE TABLE venues (
   state VARCHAR(100),
   zip_code VARCHAR(100),
   venue_type VARCHAR(200),
-  venue_img VARCHAR
+  venue_img TEXT
 );
 
 CREATE TABLE events (
@@ -20,8 +20,9 @@ CREATE TABLE events (
   event_host VARCHAR(100),
   event_time VARCHAR(100),
   event_date VARCHAR(100),
-  event_img VARCHAR,
+  event_img TEXT,
 
   ticket_price_min INTEGER,
   ticket_price_max INTEGER,
+  FOREIGN KEY (venue_id) REFERENCES venues(id)
 );

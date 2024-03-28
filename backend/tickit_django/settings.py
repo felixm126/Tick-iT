@@ -105,7 +105,7 @@ DATABASES = {
         'NAME': 'tickit',
         'USER': 'tickituser_1',
         'PASSWORD': 'tickit',
-        'HOST': 'localhost'
+        'HOST': 'localhost',
     }
 }
 

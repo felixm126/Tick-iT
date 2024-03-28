@@ -1,6 +1,13 @@
+import React from 'react'
+import AddEventForm from '../components/AddEventForm'
+
 function AddEventPage() {
-	// Use either Link / navigate to redirect to this page
-	// OR could just be a form that pops up
-	return <></>
+	return (
+		<div>
+			<h1>Add Event</h1>
+			<AddEventForm />
+		</div>
+	)
 }
+
 export default AddEventPage
